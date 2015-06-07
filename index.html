@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+      @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+      body { 
+        font-family: 'Yanone Kaffeesatz';
+      }
+
+      .shadow img {
+        -webkit-box-shadow: 11px 10px 16px 0px rgba(173,173,173,0.71);
+        -moz-box-shadow: 11px 10px 16px 0px rgba(173,173,173,0.71);
+        box-shadow: 11px 10px 16px 0px rgba(173,173,173,0.71);
+      }
+
+      .remark-slide-content {
+                color: #fff;
+      }
+
+      .story h2 {
+        font-size: 60px !important;
+      }
+
+      .fuckya {
+        background-color: #2c4763 !important;
+      }
+
+      .woohoo {
+        background-color: #4690d9 !important
+      }
+
+      .black {
+        background-color: black !important;
+      }
+
+      .orgalign {
+        background-color: #161616 !important;
+      }
+
+      .condev {
+        padding: 0;
+      }
+      
+      .spotify {
+        background-color: white !important;
+      }
+
+
+      h1, h2, h3 {
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      .pin img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 300px;
+      }
+
+      h1 {
+        font-size: 4em !important;
+      }
+
+
+      .spanny {
+        padding: 10px;
+        color: white;
+        background-color: #0b1c2e
+      }
+
+      strong {
+        font-weight: normal;
+        color: #28c4c9;
+      }
+
+      .nopadding {
+        padding: 0
+      }
+
+      .fade {
+        color: #2c5886;
+      }
+
+      .quote-author h3, .quote-author h2 {
+        text-align: right;
+      }
+
+      .findbugs img {
+        height: 500px;
+      }
+
+      .story h2 {
+        font-size: 3em;
+      }
+
+      .findbugs p {
+        text-align: center;
+      }
+
+      .remark-slide-content {
+        background-color: #0b1c2e;
+        background-size: 100% 100%
+      }
+
+      .whitebg {
+        background-color: white;
+      }
+
+      .whitebg h1, .whitebg h2, .whitebg h3 {
+        color: black !important;
+      }
+
+      .blackbg {
+        background-color: black;
+      }
+
+      .splash { 
+        position: absolute;
+        right: 3em;
+        bottom: 3em;
+        color: #EEE;
+        text-align: right;
+      }
+
+      .splash big {
+        font-size: 2.5em;
+      }
+
+      .splash small {
+        font-size: 1.6em;
+      }
+
+      .shit img {
+        width: 100%;
+      }
+
+      .splash img {
+        width: 40px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .smelling-symptoms h3 {
+          margin: 20px 0;
+      }
+
+      .smelling-symptoms .left-column {
+        width: 20%;
+        float: left;
+      }
+      
+      .smelling-symptoms .right-column {
+        width: 75%;
+        float: right;
+      }      
+
+      .packages pre {
+        font-size: 2em;
+      }
+
+      .packages pre code {
+       font-size: 0.7em; 
+      }
+
+      .packages pre strong {
+        font-weight: bold;
+      }
+
+      a {
+        color: #28c4c9;
+      }
+
+      .more img {
+          width: 200px;
+          margin-right: 10px;
+      }
+
+      .fuckup .no {
+        font-size: 200px;
+      }
+
+      .fuckup .left-column {
+        width: 8%;
+        float: left;
+        vertical-align: top;        
+        text-align: center;
+        background-color: #28c4c9;
+        margin-right: 20px;
+      }
+      
+      .fuckup .right-column {
+        width: 90%;
+        float: right;
+      }      
+
+      .fuckup .right-column h1 {
+        margin-bottom: 0px;
+      }            
+
+      .more .left-column {
+        width: 55%;
+        float: left;
+      }
+      
+      .more .right-column {
+        width: 45%;
+        float: right;
+      }      
+
+      .trello {
+        background-color: #0079bf !important;
+      }
+
+      .equal-cols .left-column {
+        width: 50%;
+        float: left;        
+      }
+
+      .equal-cols .right-column {
+        width: 50%;
+        float: right;        
+      }
+
+      .thanks h1 {
+        font-size: 150px !important;
+      }
+
+      .arrows {
+        color: #0b1c2e;
+        font-weight: bold;
+      }
+
+      .hljs-default .hljs {
+        background-color: white;
+      }
+
+      .mark h2 {
+        color: #2c5886;
+      }
+
+      .mark h2 strong {
+        color: white;
+      }      
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, title
+background-image: url(splash.jpg)
+
+# 9 Things That Make **Continuous Delivery** Go Nuts
+
+  <div class="splash">
+    <big>Eduards Sizovs</big>
+    <br/>
+    <img src="twitter.png"><small>@eduardsi</small>
+  </div>
+???
+Based on real world experience; I've been bringing CD to various company through pain and gain; still doing so; common sense; but most common sense is not common practice; beware that most challenges apply for org with more than single team.
+---
+class: orgalign, middle, fuckup
+.left-column[
+.no[1]
+]
+.right-column[
+# Lack of Organisational Alignment
+## &nbsp;
+]
+
+---
+class: middle, fuckup
+background-image:url(shadow.jpg)
+.left-column[
+.no[1]
+]
+.right-column[
+# Lack of Organisational Alignment
+## AKA Shadow Continuous Delivery
+]
+
+---
+class: center, middle
+# Story time
+## (Fintech Startup, Germany)
+
+---
+class: center, middle, story
+## Once devs decided to implement continuous delivery...
+
+---
+class: center, middle, story
+## Team Lead suggested starting with increasing deployment rate to at least once a day...
+
+---
+class: center, middle, story
+## Devs went to Ops and didn't get support because Ops reviews changes only once, at the end of Sprint...
+
+---
+class: center, middle, story, fuckya
+![](fuckya.png)
+## devs leave and continue on their own...
+
+---
+class: center, middle, story, black
+background-image:url(darkroom.jpg)
+## In a dark room, devs build uber-fast deployment pipeline...
+
+---
+class: center, middle, story, woohoo
+![](woohoo.png)
+## ... and start deploying to production every day. Devs prepare a list of changes at the end of Sprint "because Ops wants so".
+
+---
+class: center, middle, story
+## middle of week
+
+---
+class: center, middle, story
+## Mayday, Mayday! Critical integration does not work!
+
+---
+class: center, middle, story
+## Ops team goes though a list of changes and finds nothing
+
+---
+class: center, middle, story
+## Recovery takes 6 hours because Devs are AFRAID to admit they deploy once a day
+
+---
+# Consequences
+## SLA missed - lost integration partner and ~20K customers
+## Lost trust between management and IT
+## Lost trust between dev and ops
+## Team Lead fired
+
+---
+# Lessons learned
+## Since CD is primary a HUMAN system, ALIGNMENT is vital
+## See the reason behind every denial
+## Empathy (work as an Ops guy for a week, pair-ops)
+## Compromise, don't go to the extreme on the first jump
+## Go for a beer with those who don't support you
+
+---
+class: center, middle
+# Move Ops to cross-functional team as you do with QA.
+???
+- Instead of delegating Ops duties (throwing over the wall) and building separate "Ops Team", give each team someone awesome at Ops. 
+
+---
+class: spotify, middle, center
+![](spotify.png)
+### https://dl.dropboxusercontent.com/u/1018963/Articles/SpotifyScaling.pdf
+
+---
+class: middle, fuckup
+background-image:url(heroes.jpg)
+.left-column[
+.no[2]
+]
+.right-column[
+# Relying on a Tiger Team
+]
+
+---
+class: center, middle
+# Story time
+## (Fintech Enterprise, Latvia)
+
+---
+class: center, middle, story
+## A special Tiger Team comprising of coolest devs and "DevOps guys" has been formed...
+
+---
+class: center, middle, story, black
+background-image:url(darkroom.jpg)
+## In a dark room, tigers implement deployment pipeline using fancy frameworks while loser team having sex with legacy code and bugfixing.
+
+---
+class: center, middle, story
+## Time to check deployment pipeline in action!
+
+
+---
+class: center, middle, story
+## Tigers go to losers and ask to make next deployment via pipeline
+
+---
+class: center, middle, story
+## Losers refuse since they have different goals and no time "for playing games"
+
+---
+class: center, middle, story
+## Tigers ask for manager's help. Together, they try to convince losers by gently setting deadline. 
+
+---
+class: center, middle, story
+## Thanks to paid overtimes, losers give up.
+
+---
+class: center, middle, story
+## Tigers and the manager got blamed in the kitchen.
+
+---
+class: center, middle, story
+## Losers make deployment after 10 hot fixes introduced by a member of Tiger Team available in Skype. Losers are making fun of tigers.
+
+---
+class: center, middle, story
+## Pipeline is green. Tigers are having a drink.
+
+---
+class: center, middle, story
+## Losers are having a drink too - they celebrate the fact Tigers wasted 1 month of their life building this weird tool.
+
+---
+class: center, middle, story
+## The next deployment is made in an old fashion, since team is more comfortable with it... Or just in spite of tigers.
+
+---
+class: center, middle, story
+## The only team who maintains and loves pipeline is Tiger Team.
+
+---
+# Lessons learned
+## Adoption must go from the inside-out. 
+## don't build tiger teams. make everyone feel they're continuous delivery tigers.
+## External support is highly appreciated. But not more than that.
+???
+- the best way to convince people love something is making sure they spent time and were working hard on building it.
+- otherwise tigers will support "THEIR" pipeline and tools for the rest of their life.
+
+---
+class: middle, fuckup
+.left-column[
+.no[3]
+]
+.right-column[
+# Newton Law's Enemies
+]
+
+---
+# The system being produced will tend to have a structure that mirrors the structure of the group that is producing it, whether or not this was intended.
+## -- Conway's Law
+
+---
+background-image:url(crack-lv.png)
+class: whitebg
+
+---
+background-image:url(crack-lv-sys.png)
+class: whitebg
+
+---
+background-image:url(crack-ca-sys.png)
+class: whitebg
+
+---
+background-image:url(crack-ca-wall.png)
+class: whitebg
+
+---
+background-image:url(crack.png)
+class: whitebg
+???
+System start to crack because it's very hard communicate (time overlap, california team)
+- Teams start to assume because they don't communicate
+- Deployment and release management :( 
+- Code reviews
+- Teams start to work different functional items in order to reduce communication penalty. Teams grow siloed.
+- Architecture grows siloed and knowledge islands appear.
+- Continuous delivery becomes nightmare.
+
+---
+# Your team structure will override any architecture you have.
+##  -- Jeffrey Sologov
+
+---
+class: whitebg
+background-image:url(all-teams-on-single-codebase.png)
+
+---
+class: whitebg
+background-image:url(uimwdb.png)
+???
+-- this one is worse!!! 
+-- can you ship features by solely doing changes in DB?
+
+---
+class: whitebg
+background-image:url(bc.png)
+???
+-- it's not about doing micro services!!!
+-- Pursue MAXIMUM autonomy and team independence and org unit indendence.
+
+---
+# Takeaways
+## Continuous Delivery may require organisation to change (continuously, bi-di)
+## Organise systems and teams around business capabilities
+## Never split a domain across geo locations / org units
+## Respect Newton's Laws of Software Development
+???
+-Because the design that occurs first is almost never the best possible, the prevailing system concept may need to change. Therefore, flexibility of organization is important to effective design. -- Fred Brooks
+- Nature always wins.
+
+---
+class: center, middle, whitebg, shadow
+![](orgpatterns.jpg)
+
+---
+class: middle, fuckup
+.left-column[
+.no[4]
+]
+.right-column[
+# Misunderstanding of Fundamental Principles
+## Because blindly following practices is not enough 
+]
+
+---
+# Real-world examples
+
+---
+## Eventually Consistent Deployment Pipeline
+
+## Working in Mainline when branching is necessary
+
+## Everything is kept in source control even if it's already stored on S3 
+
+## Buying expensive production-like environments for non-critical service testing.
+
+## If somethings difficult or painful, do it more often (what if you're doing WRONG THING or doing THING WRONG?)
+
+
+---
+class: center, middle
+# Ask **WHYYYY**????
+
+---
+class: center, middle
+# Collect as many opinions as possible
+
+---
+background-image: url(condev.jpg) 
+class: center, middle, condev
+
+
+---
+class: center, middle
+# Invite me for a coffee.
+???
+I am unemployed, use this opportunity!
+
+---
+class: middle, fuckup
+.left-column[
+.no[5]
+]
+.right-column[
+# Optimizing the wrong thing
+]
+
+---
+background-image:url(push.png)
+class: whitebg
+# Push
+???
+Deliver more!!! Optimize locally. Suboptimize the whole.
+
+---
+background-image:url(pull.png)
+class: whitebg
+# Pull instead.
+
+---
+background-image:url(trello.png)
+class: center, middle, whitebg, trello
+???
+- You're blocked, other team members are working on something else.
+- What do you normally do? 
+
+---
+class: center, middle
+# Let's grab one more feature!!!
+## (optimising for utilization)
+???
+You increase batch size :(
+
+---
+background-image:url(little.jpg)
+class: center, middle, whitebg
+???
+Linear relatinship between work-in-progress and average lead time. Increased lead time causes lower quality.
+
+---
+# What can you do instead?
+## Unblock value stream
+## Work on solution that will prevent blocking in future
+## Help your team finish existing work
+## Help other teams finish existing work
+## Improve things
+
+---
+# Takeaways
+## Optimize the whole (In every system, exactly one constraint determines the system’s capacity)
+## Embrace slack
+## Strictly limit WiP
+
+---
+class: center, middle, whitebg, shadow
+![](kanban.jpg)
+
+---
+class: middle, fuckup
+.left-column[
+.no[6]
+]
+.right-column[
+# Delivering the wrong thing
+]
+
+---
+class: center, middle
+## Continuous Delivery is a software engineering approach in which teams keep producing **valuable** software in short cycles and ensure that the software can be reliably released at any time (c) Wikipedia
+
+---
+class: center, middle, whitebg, shit
+![](shit.png)
+
+---
+- A/B testing
+- Measuring Outcomes (vanity metrics) vs. Outcomes (we have to minimize output, maximize outcomes)
+- Make sure devs are on support (e.g. replying to technical complains)
+- Continous Delivery of Crap; Accelerating delivery of crap
+
+
+---
+class: middle, fuckup
+background-image:url(slavery.jpg)
+.left-column[
+.no[7]
+]
+.right-column[
+# Slavery
+]
+
+---
+- We are talking about organisational change, optimising things around you, impacting what and when gets delivered.
+- This is critical for CD because it's build on culture of stopping or slowing down to get things right.
+
+---
+class: center
+![](andon.png)
+
+---
+class: center
+![](andon.png)
+# Andon Cord
+???
+Can you pull Andon cord? 
+HR coming story (tell me about all your problems)
+
+---
+class: center, shadow, whitebg
+![](changetheworld.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![](leanenterprise.jpg)
+
+
+---
+class: middle, fuckup
+.left-column[
+.no[8]
+]
+.right-column[
+# Technical Obsession
+]
+
+---
+## Very famous product company, Australia
+## Challenge: implement auto-deployment with auto-scaling
+## Stack: AWS, Capistrano (too simple and boring)
+
+---
+## it sure would be fun to use...
+
+
+---
+## it sure would be fun to use...
+## Docker
+
+---
+## it sure would be fun to use...
+## Docker
+## because...
+
+---
+## it sure would be fun to use...
+## Docker
+## because...
+## everyone is using it
+
+---
+## it sure would be fun to use...
+## Docker
+## because...
+## everyone is **kinda** using it
+
+---
+## it sure would be fun to use...
+## Docker
+## because...
+## everyone is **kinda** using it
+## and it opens new opportunities
+
+---
+## it sure would be fun to use...
+## Docker
+## because...
+## everyone is **kinda** using it
+## and it **kinda** opens new opportunities
+
+---
+background-image: url(coreos.png)
+
+---
+background-image: url(mesos.png)
+
+---
+background-image: url(marathon.png)
+
+---
+# 1 month later... 
+
+---
+background-image:url(hydra.jpg)
+# Hydra was born
+
+---
+background-image:url(hydra.jpg)
+# Hydra was born
+### In Greek mythology, the Lernaean Hydra was an ancient serpent-like water monster with reptilian traits. **It possessed many heads – more heads than the vase-painters could paint – and for each head cut off it grew two more**. 
+???
+- They felt so small and totally out of control. Team became slave of the system.
+
+---
+background-image:url(ww.jpg)
+class: center, middle, story
+## After 3 months long war, team suffered many losses and capitulated. It took them one more month to move back to good, old and simple stack and just 2 weeks to achieve the initial goal.
+
+---
+Lesson's learned
+
+---
+# [Trendy solutions] are like teenage sex.  Everyone is talking about it but few have actually done it.
+
+---
+# [Trendy solutions] are like teenage sex.  Everyone is talking about it but few have actually done it.
+Even if everyone is doing... doesn't mean you need to 
+???
+in case of teenage sex it's a criminal offense.
+
+---
+# The Law of Leaky Abstractions is real
+http://www.joelonsoftware.com/articles/LeakyAbstractions.html
+
+---
+# Nothing opens more opportunities than simple, easy-to-understand solution
+
+---
+# Nothing opens more opportunities than simple, easy-to-understand solution
+(even if it's not fancy)
+???
+#  If you write down exactly what it is about the current stack that makes solving the problem prohibitively expensive and difficult
+
+---
+---
+class: middle, fuckup
+.left-column[
+.no[9]
+]
+.right-column[
+# Giving up too early
+]
+
+---
+### - I don't keep up with testing!
+### - Working in trunk is stupid and dangerous idea.
+### - Damn it, one more rollback!
+### - Deployment is so cumbersome.
+### - I am stuck with current feature... WiP limit makes me linger.
+### - It doesn't work for us!
+
+# Continuous Delivery causes so many problems!
+
+---
+### - I don't keep up with testing!
+### - Working in trunk is stupid and dangerous idea.
+### - Damn it, one more rollback!
+### - Deployment is so cumbersome.
+### - I am stuck with current feature... WiP limit makes me linger.
+
+# Continuous Delivery causes**reveals**so many problems!
+
+
+---
+Continuous delivery is a long journey that require discipline, cool head and persistance.
+
+Never back down. It's worth it!
+
+
+---
+class: nopadding, center, middle, thanks
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(applause.gif)
+# Thank you
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({ 
+            ratio: '16:9', 
+            slideNumberFormat: function (current, total) { return "" } 
+      });
+    </script>
+  </body>
+</html>
