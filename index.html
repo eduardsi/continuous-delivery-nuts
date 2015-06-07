@@ -24,6 +24,19 @@
                 color: #fff;
       }
 
+      .strike {
+        color:red;
+        text-decoration: line-through;
+      }
+
+      .fix {
+        color: #00CC66;
+      }
+
+      .kanban img {
+        width: 70%;
+      }
+
       .story h2 {
         font-size: 60px !important;
       }
@@ -257,7 +270,7 @@
 class: center, middle, title
 background-image: url(splash.jpg)
 
-# 9 Things That Make **Continuous Delivery** Go Nuts
+# 8 Things That Make **Continuous Delivery** Go Nuts
 
   <div class="splash">
     <big>Eduards Sizovs</big>
@@ -346,7 +359,7 @@ class: center, middle, story
 # Lessons learned
 ## Since CD is primary a HUMAN system, ALIGNMENT is vital
 ## See the reason behind every denial
-## Empathy (work as an Ops guy for a week, pair-ops)
+## Emphatize (work as an Ops guy for a week, pair-ops)
 ## Compromise, don't go to the extreme on the first jump
 ## Go for a beer with those who don't support you
 
@@ -449,8 +462,9 @@ class: middle, fuckup
 ]
 
 ---
-# The system being produced will tend to have a structure that mirrors the structure of the group that is producing it, whether or not this was intended.
-## -- Conway's Law
+class: story, middle, center
+## The system being produced will tend to have a structure that mirrors the structure of the group that is producing it, whether or not this was intended.
+### (c) Conway's Law
 
 ---
 background-image:url(crack-lv.png)
@@ -481,8 +495,9 @@ System start to crack because it's very hard communicate (time overlap, californ
 - Continuous delivery becomes nightmare.
 
 ---
-# Your team structure will override any architecture you have.
-##  -- Jeffrey Sologov
+class: story, middle, center
+## Your team structure will override any architecture you have.
+### (c) Jeffrey Sologov
 
 ---
 class: whitebg
@@ -616,7 +631,7 @@ Linear relatinship between work-in-progress and average lead time. Increased lea
 ## Strictly limit WiP
 
 ---
-class: center, middle, whitebg, shadow
+class: center, middle, whitebg, shadow, kanban
 ![](kanban.jpg)
 
 ---
@@ -629,62 +644,45 @@ class: middle, fuckup
 ]
 
 ---
-class: center, middle
-## Continuous Delivery is a software engineering approach in which teams keep producing **valuable** software in short cycles and ensure that the software can be reliably released at any time (c) Wikipedia
+class: center, middle, story
+## Continuous Delivery is a software engineering approach in which teams keep producing **valuable** software in short cycles and ensure that the software can be reliably released at any time 
+### (c) Wikipedia
 
 ---
 class: center, middle, whitebg, shit
 ![](shit.png)
+???
+Does it make sense to accelerate delivery of shit?
+Does it make sense to spend money on doing it realibly?
 
 ---
-- A/B testing
-- Measuring Outcomes (vanity metrics) vs. Outcomes (we have to minimize output, maximize outcomes)
-- Make sure devs are on support (e.g. replying to technical complains)
-- Continous Delivery of Crap; Accelerating delivery of crap
+class: middle, center
+# Before doing continuous delivery, find out what value really means, for whom and how to mine it.
 
+---
+# Value mining
+## Genchi genbutsu
+## Work closely with customer service team
+## Experiment (MVP, A/B testing, pretotyping)
+## Become a customer (eat your own dog food)
+
+---
+class: center, middle
+# Minimize output, maximize outcome.
+???
+Top secret: you don't have to do a lot to achieve a lot.
 
 ---
 class: middle, fuckup
-background-image:url(slavery.jpg)
 .left-column[
 .no[7]
-]
-.right-column[
-# Slavery
-]
-
----
-- We are talking about organisational change, optimising things around you, impacting what and when gets delivered.
-- This is critical for CD because it's build on culture of stopping or slowing down to get things right.
-
----
-class: center
-![](andon.png)
-
----
-class: center
-![](andon.png)
-# Andon Cord
-???
-Can you pull Andon cord? 
-HR coming story (tell me about all your problems)
-
----
-class: center, shadow, whitebg
-![](changetheworld.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![](leanenterprise.jpg)
-
-
----
-class: middle, fuckup
-.left-column[
-.no[8]
 ]
 .right-column[
 # Technical Obsession
 ]
 
 ---
+class: middle
 ## Very famous product company, Australia
 ## Challenge: implement auto-deployment with auto-scaling
 ## Stack: AWS, Capistrano (too simple and boring)
@@ -712,21 +710,21 @@ class: middle, fuckup
 ## it sure would be fun to use...
 ## Docker
 ## because...
-## everyone is **kinda** using it
+## everyone is using it (**kinda**)
 
 ---
 ## it sure would be fun to use...
 ## Docker
 ## because...
-## everyone is **kinda** using it
+## everyone is using it (**kinda**)
 ## and it opens new opportunities
 
 ---
 ## it sure would be fun to use...
 ## Docker
 ## because...
-## everyone is **kinda** using it
-## and it **kinda** opens new opportunities
+## everyone is using it (**kinda**)
+## and it opens new opportunities (**kinda**)
 
 ---
 background-image: url(coreos.png)
@@ -738,6 +736,7 @@ background-image: url(mesos.png)
 background-image: url(marathon.png)
 
 ---
+class: center, middle
 # 1 month later... 
 
 ---
@@ -746,8 +745,9 @@ background-image:url(hydra.jpg)
 
 ---
 background-image:url(hydra.jpg)
+class: story
 # Hydra was born
-### In Greek mythology, the Lernaean Hydra was an ancient serpent-like water monster with reptilian traits. **It possessed many heads – more heads than the vase-painters could paint – and for each head cut off it grew two more**. 
+## In Greek mythology, the Lernaean Hydra was an ancient serpent-like water monster with reptilian traits. **It possessed many heads – more heads than the vase-painters could paint – and for each head cut off it grew two more**. 
 ???
 - They felt so small and totally out of control. Team became slave of the system.
 
@@ -757,64 +757,75 @@ class: center, middle, story
 ## After 3 months long war, team suffered many losses and capitulated. It took them one more month to move back to good, old and simple stack and just 2 weeks to achieve the initial goal.
 
 ---
-Lesson's learned
+class: center, middle, story
+## [Trendy solutions] are like teenage sex.  Everyone is talking about it but few have actually done it.
+## &nbsp;
 
 ---
-# [Trendy solutions] are like teenage sex.  Everyone is talking about it but few have actually done it.
-
----
-# [Trendy solutions] are like teenage sex.  Everyone is talking about it but few have actually done it.
-Even if everyone is doing... doesn't mean you need to 
+class: center, middle, story
+## [Trendy solutions] are like teenage sex.  Everyone is talking about it but few have actually done it.
+## Even if everyone is doing... doesn't mean you need to 
 ???
 in case of teenage sex it's a criminal offense.
 
 ---
-# The Law of Leaky Abstractions is real
-http://www.joelonsoftware.com/articles/LeakyAbstractions.html
+class: center, middle, story
+## The Law of Leaky Abstractions is real
+### http://www.joelonsoftware.com/articles/LeakyAbstractions.html
 
 ---
-# Nothing opens more opportunities than simple, easy-to-understand solution
+class: center, middle, story
+## Nothing opens more opportunities than simple, easy-to-understand solution.
+## &nbsp;
 
 ---
-# Nothing opens more opportunities than simple, easy-to-understand solution
-(even if it's not fancy)
+class: center, middle, story
+## Nothing opens more opportunities than simple, easy-to-understand solution.
+## (even if it's not fancy)
 ???
 #  If you write down exactly what it is about the current stack that makes solving the problem prohibitively expensive and difficult
 
 ---
----
 class: middle, fuckup
 .left-column[
-.no[9]
+.no[8]
 ]
 .right-column[
 # Giving up too early
 ]
 
 ---
-### - I don't keep up with testing!
-### - Working in trunk is stupid and dangerous idea.
-### - Damn it, one more rollback!
-### - Deployment is so cumbersome.
-### - I am stuck with current feature... WiP limit makes me linger.
-### - It doesn't work for us!
+## - I don't keep up with testing!
+## - Working in trunk is stupid and dangerous idea.
+## - Damn it, one more rollback!
+## - Deployment is so cumbersome.
+## - I am stuck with current feature... WiP limit makes me linger.
+## - It doesn't work for us!
 
+---
+class: center, middle
 # Continuous Delivery causes so many problems!
+???
+CD puts a presure, but you crack. 
 
 ---
-### - I don't keep up with testing!
-### - Working in trunk is stupid and dangerous idea.
-### - Damn it, one more rollback!
-### - Deployment is so cumbersome.
-### - I am stuck with current feature... WiP limit makes me linger.
-
-# Continuous Delivery causes**reveals**so many problems!
-
+class: center, middle
+# Continuous Delivery .strike[causes] .fix[reveals] so many problems!
 
 ---
-Continuous delivery is a long journey that require discipline, cool head and persistance.
+class: center, middle
+background-image:url(battle.jpg)
+# Obstacles, obstacles, obstacles...
+???
+The worst things that can happen is when your stop in face of obstacles.
+All companies have opportunities to change.
 
-Never back down. It's worth it!
+---
+class: center, shadow, whitebg
+![](leanenterprise.jpg)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![](changetheworld.png)
+???
+In fact, you don't have to change the world. You have to start changing your company. And yourself.
 
 
 ---
