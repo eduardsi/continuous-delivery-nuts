@@ -95,7 +95,8 @@
 
       strong {
         font-weight: normal;
-        color: #28c4c9;
+        color: white;
+        background-color: #28c4c9;
       }
 
       .nopadding {
@@ -274,7 +275,7 @@
 class: center, middle, title
 background-image: url(splash.jpg)
 
-# 8 Things That Make **Continuous Delivery** Go Nuts
+# **8 Things** That Make **Continuous Delivery** Go Nuts
 
   <div class="splash">
     <big>Eduards Sizovs</big>
@@ -308,49 +309,17 @@ background-image:url(shadow.jpg)
 class: center, middle
 # Story time
 ## (Fintech Startup, Germany)
-
----
-class: center, middle, story
-## Once devs decided to implement continuous delivery...
-
----
-class: center, middle, story
-## Team Lead suggested starting with increasing deployment rate to at least once a day...
-
----
-class: center, middle, story
-## Devs went to Ops and didn't get support because Ops reviews changes only once, at the end of Sprint...
-
----
-class: center, middle, story, fuckya
-![](fuckya.png)
-## devs leave and continue on their own...
-
----
-class: center, middle, story, black
-background-image:url(darkroom.jpg)
-## In a dark room, devs build uber-fast deployment pipeline...
-
----
-class: center, middle, story, woohoo
-![](woohoo.png)
-## ... and start deploying to production every day. Devs prepare a list of changes at the end of Sprint "because Ops wants so".
-
----
-class: center, middle, story
-## middle of week
-
----
-class: center, middle, story
-## Mayday, Mayday! Critical integration does not work!
-
----
-class: center, middle, story
-## Ops team goes though a list of changes and finds nothing
-
----
-class: center, middle, story
-## Recovery takes 6 hours because Devs are AFRAID to admit they deploy once a day
+???
+- Once devs decided to implement continuous delivery...
+- Leam lead - once in a day
+- Ops did give support (review changes at end of Sprint)
+- devs continue on their own.
+- devs build pipeline and start deploying to production every day. 
+- they prepare a list of changes at the end of Sprint "because Ops wants so".
+- middle of week
+- production goes down (critical integration point)
+- Ops team goes though a list of changes and finds nothing
+- Recovery takes 6 hours because Devs are AFRAID to admit they deploy once a day
 
 ---
 # Consequences
@@ -392,70 +361,28 @@ background-image:url(heroes.jpg)
 class: center, middle
 # Story time
 ## (Fintech Enterprise, Latvia)
-
----
-class: center, middle, story
-## A special Tiger Team comprising of coolest devs and "DevOps guys" has been formed...
-
----
-class: center, middle, story, black
-background-image:url(darkroom.jpg)
-## In a dark room, tigers implement deployment pipeline using fancy frameworks while loser team having sex with legacy code and bugfixing.
-
----
-class: center, middle, story
-## Time to check deployment pipeline in action!
-
-
----
-class: center, middle, story
-## Tigers go to losers and ask to make next deployment via pipeline
-
----
-class: center, middle, story
-## Losers refuse since they have different goals and no time "for playing games"
-
----
-class: center, middle, story
-## Tigers ask for manager's help. Together, they try to convince losers by gently setting deadline. 
-
----
-class: center, middle, story
-## Thanks to paid overtimes, losers give up.
-
----
-class: center, middle, story
-## Tigers and the manager got blamed in the kitchen.
-
----
-class: center, middle, story
-## Losers make deployment after 10 hot fixes introduced by tigers. Losers are making fun of tigers.
-
----
-class: center, middle, story, engineered
-## Pipeline is green. Tigers are having a drink.
-![](engineered.jpg)
-
----
-class: center, middle, story
-background-image:url(mojito.jpg)
-## Losers are having a drink too - they celebrate the fact Tigers wasted 1 month of their life building this weird tool.
-
----
-class: center, middle, story
-## The next deployment is made in an old fashion, since team is more comfortable with it... Or just in spite of tigers.
-
----
-class: center, middle, story
-## The only team who maintains and loves pipeline is Tiger Team.
+???
+- A special Tiger Team comprising of coolest devs and "DevOps guys" has been formed...
+- In a dark room, tigers implement deployment pipeline using fancy frameworks while loser team having sex with legacy code and bugfixing.
+- Tigers go to losers and ask to make next deployment via pipeline
+- Losers refuse since they have different goals and no time "for playing games"
+- Tigers ask for manager's help. Together, they try to convince losers by gently setting deadline. 
+- Thanks to paid overtimes, losers give up. 
+- Rumors in the kitchen that managers values tigers more than losers.
+- Losers make deployment after 10 hot fixes introduced by tigers. Losers are making fun of tigers.
+- Pipeline is green. Tigers are having a drink.
+- Losers are having a drink too - they celebrate the fact Tigers wasted 1 month of their life building this weird tool.
+- The next deployment is made in an old fashion, since team is more comfortable with it... Or just in spite of tigers.
+- The only team who maintains and loves pipeline is Tiger Team.
 
 ---
 # Lessons learned
 ## Adoption must go from the inside-out. 
 ## External support is highly appreciated. But not more than that.
+## CD is just solution for a problem. Team that is in trouble should learn how to solve it.
 ???
-- make sure adoption starts with the team who can directly benefit from CD (and make sure they feel like tigers)
-- otherwise tigers will support "THEIR" pipeline and tools for the rest of their life.
+- team that directly benefit from CD (feels like tigers). 
+- why consultants can't implement continuous delivery (ok, solve problem, what's next?)
 
 ---
 class: middle, fuckup
@@ -496,7 +423,7 @@ class: whitebg
 System start to crack because:
 - In order to avoid communication penalty we have to find way to isolate!!!
 - Teams grow siloed.
-- Architecture grows siloed and knowledge islands appear.
+- Code grows, architecture grows siloed and knowledge islands appear.
 - add problem of deployment, release coordination, lack of PP and code revies!
 - Continuous delivery becomes nightmare.
 
@@ -534,6 +461,7 @@ background-image:url(bc.png)
 
 ---
 class: center, middle, whitebg, shadow
+![](mmm.jpg)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![](orgpatterns.jpg)
 
 ---
@@ -595,15 +523,8 @@ class: whitebg
 background-image:url(trello.png)
 class: center, middle, whitebg, trello
 ???
-- You're blocked, other team members are working on something else.
-- What do you normally do? 
-
----
-class: center, middle
-# Let's grab one more feature!!!
-## (optimising for utilization)
-???
-You increase batch size :(
+- What do you normally do? GRAB THE NEXT FEATURE (OPTIMIZE FOR UTILIZATION).
+- AND YOU INCREASE BATCH SIZE.
 
 ---
 background-image:url(little.jpg)
@@ -652,20 +573,22 @@ Does it make sense to spend money on doing it realibly?
 
 ---
 class: middle, center
-# Before doing continuous delivery, find out what value really means, for whom and how to mine it.
+# Before doing continuous delivery, find out what **value** really means, for whom and how to mine it.
 
 ---
 # Value mining
 ## Genchi genbutsu
 ## Work closely with customer service team
 ## Experiment (MVP, A/B testing, pretotyping)
-## Become a customer (eat your own dog food)
+## Become a customer
 
 ---
 class: center, middle
 # Minimize output, maximize outcome.
 ???
 Top secret: you don't have to do a lot to achieve a lot.
+- Vanity metrics (seems like we do a lot to delight customer)
+- Work smart, not hard.
 
 ---
 class: middle, fuckup
@@ -706,30 +629,15 @@ background-image:url(deedee.jpg)
 ## it sure would be fun to use...
 ## Docker
 ## because...
-## everyone is using it
+## everyone is using it 
 
 ---
 background-image:url(deedee.jpg)
 ## it sure would be fun to use...
 ## Docker
 ## because...
-## everyone is using it (**kinda**)
-
----
-background-image:url(deedee.jpg)
-## it sure would be fun to use...
-## Docker
-## because...
-## everyone is using it (**kinda**)
+## everyone is using it 
 ## and it opens new opportunities
-
----
-background-image:url(deedee.jpg)
-## it sure would be fun to use...
-## Docker
-## because...
-## everyone is using it (**kinda**)
-## and it opens new opportunities (**kinda**)
 
 ---
 background-image: url(coreos.png)
@@ -791,8 +699,13 @@ class: center, middle, story
 background-image:url(simple.jpg)
 ## Nothing opens more opportunities than simple, easy-to-understand solution.
 ## (even if it's not fancy)
+
+---
+class: center, middle, story
+## Write down exactly what it is about the current stack that makes solving the problem prohibitively expensive and difficult.
 ???
-#  If you write down exactly what it is about the current stack that makes solving the problem prohibitively expensive and difficult
+Rule: before you or someone adds new tools or frameworks. 
+- you will be surprised how little new things you really need.
 
 ---
 class: middle, fuckup
@@ -819,7 +732,7 @@ CD puts a presure, but you crack.
 
 ---
 class: center, middle
-# Continuous Delivery .strike[causes] .fix[reveals] so many problems!
+# Continuous Delivery .strike[causes] **reveals** so many problems!
 
 ---
 class: center, middle
