@@ -483,7 +483,12 @@ class: whitebg
 background-image:url(crack-ca-wall.png)
 class: whitebg
 ???
-it's very hard communicate (time overlap, california team)
+it's very hard communicate (time overlap, california team). 
+
+Instead of fixing the wall first, managers said: 
+BRING THE PAIN FORWARD! 
+LET'S MOVE FASTER AND DEPLOY AS SOON AS FEATURE IS READY. 
+CD IS SOLELY TECHNICAL CHALLENGE ANYWAY.
 
 ---
 background-image:url(crack.png)
@@ -492,8 +497,9 @@ class: whitebg
 System start to crack because:
 - In order to avoid communication penalty we have to find way to isolate!!!
 - Teams grow siloed.
-- Code grows, architecture grows siloed and knowledge islands appear.
-- add problem of deployment, release coordination, lack of PP and code revies!
+- Code grows, architecture grows siloed and knowledge islands appear (no PP, no CodeReviews, WHAT'S THAT???)
+- Teams started to blame each other (if there was a bug introduced by team A, team B doesn't care)
+- Team A promised to deliver today, but due to Team B they have to rollback. OOPS.
 - Continuous delivery becomes nightmare.
 
 ---
@@ -860,22 +866,20 @@ background-image:url(leaky.jpg)
 
 ---
 class: center, middle, story
-background-image:url(simple.jpg)
-## Nothing opens more opportunities than simple, easy-to-understand solution.
-## &nbsp;
+background-image:url(complexity.jpg)
 
----
-class: center, middle, story
-background-image:url(simple.jpg)
-## Nothing opens more opportunities than simple, easy-to-understand solution.
-## (even if it's not fancy)
+## **Complexitax** is the extra cost that you pay for accidental complexity introduced by a tool that does more than you need. 
+### (c) Neal Ford
+???
+
 
 ---
 class: center, middle, story
 ## Write down exactly what it is about the current stack that makes solving the problem prohibitively expensive and difficult.
 ???
 Rule: before you or someone adds new tools or frameworks. 
-- you will be surprised how little new things you really need.
+- you will be surprised how little new things you really need and will avoid overproduction (important for CD)
+- Nothing opens more opportunities than simple, easy-to-understand solution (even if it's not fancy)
 
 ---
 class: middle, fuckup
@@ -899,30 +903,30 @@ background-image:url(cry.jpg)
 background-image:url(cry.jpg)
 ## I don't keep up with testing!
 ## Working in trunk is stupid and dangerous idea.
-## Damn it, one more rollback!
+## QA engineers have different manager, he will not understand.
 
 ---
 background-image:url(cry.jpg)
 ## I don't keep up with testing!
 ## Working in trunk is stupid and dangerous idea.
-## Damn it, one more rollback!
+## QA engineers have different manager, he will not understand.
 ## Deployment is so cumbersome.
 
 ---
 background-image:url(cry.jpg)
 ## I don't keep up with testing!
 ## Working in trunk is stupid and dangerous idea.
-## Damn it, one more rollback!
+## QA engineers have different manager, he will not understand.
 ## Deployment is so cumbersome.
-## I am stuck with current feature... WiP limit makes me linger.
+## You really want me to talk to security officer? 
 
 ---
 background-image:url(cry.jpg)
 ## I don't keep up with testing!
 ## Working in trunk is stupid and dangerous idea.
-## Damn it, one more rollback!
-## Deployment is so cumbersome.
-## I am stuck with current feature... WiP limit makes me linger.
+## QA engineers have different manager, he will not understand.
+## We have 200 nodes. 
+## You really want me to talk to security officer? 
 ## It doesn't work for us!
 
 ---
