@@ -437,25 +437,19 @@ class: center, middle
 
 ---
 # Lessons learned
-## Adoption must go from the inside-out. 
-## .fade[External support is highly appreciated. But not more than that.]
-## .fade[CD is just solution for a problem. Team that is in trouble should learn how to solve it.]
+## Over-utilized "slaves" can't do CD. "Tigers" will eventually fail.
+## .fade[CD is a journey, not a marathon.]
 ???
 - team that directly benefit from CD (feels like tigers). 
+- instead of building tiger teams around UTILIZED slaves, give "slaves" 1/4 of their time to improve things. Overutilized teams can't do CD.
 
 ---
 # Lessons learned
-## .fade[Adoption must go from the inside-out. ]
-## External support is highly appreciated. But not more than that.
-## .fade[CD is just solution for a problem. Team that is in trouble should learn how to solve it.]
-
----
-# Lessons learned
-## .fade[Adoption must go from the inside-out.]
-## .fade[External support is highly appreciated. But not more than that.]
-## CD is just solution for a problem. Team that is in trouble should learn how to solve it.
+## .fade[Over-utilized "slaves" can't do CD. "Tigers" will eventually fail.]
+## CD is a journey, not a marathon.
 ???
 - why consultants can't implement continuous delivery (ok, solve problem, what's next?)
+- invest in team's abiltiy to continuously improve -> it may lead to CD. CD is not possible w/o CI culture.
 
 ---
 class: middle, fuckup
@@ -489,27 +483,28 @@ class: whitebg
 ???
 it's very hard communicate (time overlap, california team). 
 
-Instead of fixing the wall first, managers said: 
-BRING THE PAIN FORWARD! 
-LET'S MOVE FASTER AND DEPLOY AS SOON AS FEATURE IS READY. 
-CD IS SOLELY TECHNICAL CHALLENGE ANYWAY.
+---
+background-image:url(bringthepain.png)
+class: whitebg
+???
+Agile coach: BRING THE PAIN FORWARD! YOU WILL FIGURE OUT THE WAY HOW TO COMMUNICATE
 
 ---
 background-image:url(crack.png)
 class: whitebg
 ???
 System start to crack because:
-- In order to avoid communication penalty we have to find way to isolate!!!
-- Teams grow siloed.
-- Code grows, architecture grows siloed and knowledge islands appear (no PP, no CodeReviews, WHAT'S THAT???)
-- Teams started to blame each other (if there was a bug introduced by team A, team B doesn't care)
-- Team A promised to deliver today, but due to Team B they have to rollback. OOPS.
-- Continuous delivery becomes nightmare.
+- Instead trying to find the issue, in order to avoid communication penalty we have to find way to isolate!!!
+- Chat messages read only next day, no PP, no code reviews, no inter-team standups. BUT THE SAME CODEBASE
+- Code grows, architecture grows siloed and knowledge islands appear.
+- Continuous Delivery ended up CONTINUOUS BLAMING (Team A rollbacks for Team B, Team B looks at code they don't know etc.)
 
 ---
 class: story, middle, center
 ## Your team structure will override any architecture you have.
 ### (c) Jeffrey Sologov
+???
+Check mate!!! 
 
 ---
 class: whitebg
@@ -532,8 +527,8 @@ background-image:url(bc.png)
 ---
 # Takeaways
 ## Continuous Delivery may require organisation to change (continuously, bi-di)
-## .fade[Organise systems and teams around business capabilities]
-## .fade[Never split a domain across geo locations / org units]
+## .fade[Some teams have very high pain tolerance]
+## .fade[Pain usually leads to painkillers, instead of solving actual problems]
 ## .fade[Respect Newton's Laws of Software Development]
 ???
 before going fast, clean up the basement - improve architecture so it enabled CD.
@@ -542,25 +537,30 @@ And since you can't build architecture right from the first shot, org ability to
 ---
 # Takeaways
 ## .fade[Continuous Delivery may require organisation to change (continuously, bi-di)]
-## Organise systems and teams around business capabilities
-## .fade[Never split a domain across geo locations / org units]
+## Some teams have very high pain tolerance
+## .fade[Pain usually leads to painkillers, instead of solving actual problems]
 ## .fade[Respect Newton's Laws of Software Development]
 
 ---
 # Takeaways
 ## .fade[Continuous Delivery may require organisation to change (continuously, bi-di)]
-## .fade[Organise systems and teams around business capabilities]
-## Never split a domain across geo locations / org units
+## .fade[Some teams have very high pain tolerance]
+## Pain usually leads to painkillers, instead of solving actual problems
 ## .fade[Respect Newton's Laws of Software Development]
 
 ---
 # Takeaways
 ## .fade[Continuous Delivery may require organisation to change (continuously, bi-di)]
-## .fade[Organise systems and teams around business capabilities]
-## .fade[Never split a domain across geo locations / org units]
+## .fade[Some teams have very high pain tolerance]
+## .fade[Pain usually leads to painkillers, instead of solving actual problems]
 ## Respect Newton's Laws of Software Development
 ???
 - There are many more rules, you can learn about them in MMM
+
+---
+class: center, middle
+# How does a project get to be a year late? One day at a time!
+## (c) Mythican Man Month
 
 
 ---
@@ -631,20 +631,26 @@ background-image:url(push.png)
 class: whitebg
 # Push
 ???
-- You are just small screw in the org. 
-- Deliver more!!! Optimize locally. Suboptimize the whole.
+- We have to move faster. Moving faster as an organisation, not as "part of the team".
+- QA are overutilised. You should know that overutilized teams do crappy thigns.
+
 
 ---
-background-image:url(pull.png)
-class: whitebg
-# Pull instead.
-
----
-background-image:url(trello.png)
-class: center, middle, whitebg, trello
+class: trello
+background-image:url(wipTest.png)
 ???
-- What do you normally do? GRAB THE NEXT FEATURE (OPTIMIZE FOR UTILIZATION).
-- AND YOU INCREASE BATCH SIZE.
+Set wip limit! Say that there can be only 1 item under testing at max.
+
+---
+class: trello
+background-image:url(wipDev.png)
+???
+
+
+---
+class: trello
+background-image:url(wipTodo.png)
+
 
 ---
 background-image:url(little.jpg)
@@ -659,66 +665,29 @@ Team has 32 cards in process (total WIP) and a throughput of 2 cards/day,
 Average cycle time = **???** days 
 
 ???
-16
+16!!
 If the same team maintains the same throughput but increases its total WIP to 40 cards, the average cycle time becomes 32 days.
-
----
-# What can you do instead?
-## Unblock value stream
-## .fade[Work on solution that will prevent blocking in future]
-## .fade[Help your team finish existing work]
-## .fade[Help other teams finish existing work]
-## .fade[Improve things]
-
----
-# What can you do instead?
-## .fade[Unblock value stream]
-## Work on solution that will prevent blocking in future
-## .fade[Help your team finish existing work]
-## .fade[Help other teams finish existing work]
-## .fade[Improve things]
-
----
-# What can you do instead?
-## .fade[Unblock value stream]
-## .fade[Work on solution that will prevent blocking in future]
-## Help your team finish existing work
-## .fade[Help other teams finish existing work]
-## .fade[Improve things]
-
----
-# What can you do instead?
-## .fade[Unblock value stream]
-## .fade[Work on solution that will prevent blocking in future]
-## .fade[Help your team finish existing work]
-## Help other teams finish existing work
-## .fade[Improve things]
-
----
-# What can you do instead?
-## .fade[Unblock value stream]
-## .fade[Work on solution that will prevent blocking in future]
-## .fade[Help your team finish existing work]
-## .fade[Help other teams finish existing work]
-## Improve things
+If I want avg cycle team = 1 day?
 
 ---
 # Takeaways
 ## Optimize the whole (In every system, exactly one constraint determines the system’s capacity)
-## .fade[Embrace slack]
-## .fade[Reduce and limit WiP]
+## .fade[1 completed feature beats 10 in progress]
+## .fade[QAs! Never be just testers. Be testing facilitators.]
 
 ---
 # Takeaways
 ## .fade[Optimize the whole (In every system, exactly one constraint determines the system’s capacity)]
-## Embrace slack
-## .fade[Reduce and limit WiP]
+## 1 completed feature beats 10 in progress
+## .fade[QAs! Never be just testers. Be testing facilitators.]
 
 ---
 # Takeaways
 ## .fade[Optimize the whole (In every system, exactly one constraint determines the system’s capacity)]
-## .fade[Embrace slack]
-## Reduce and limit WIP
+## .fade[1 completed feature beats 10 in progress]
+## QAs! Never be just testers. Be testing facilitators.
+???
+Devs never had time for testing. I sent QA to vacation. ... Don't send QA to permanent vacation though :)
 
 ---
 class: center, middle, whitebg, shadow, kanban
